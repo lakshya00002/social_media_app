@@ -3,7 +3,7 @@ from like_app.controllers.like_controller import LikeController
 
 like_bp=Blueprint('like_bp',__name__)
 
-@like_bp.route('/likes',methods=['POST'])
+@like_bp.route('/api/like',methods=['POST'])
 def create_like(user_id,post_id):
     data=request.json
     user_id=data.get('user_id')
